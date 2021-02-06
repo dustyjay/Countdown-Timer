@@ -1,6 +1,5 @@
 # Countdown-Timer
 
-
 ## Installation
 
 ```
@@ -23,6 +22,7 @@ var interval;
 var timer = Countdown('2021-12-25');
 interval = setInterval(() => {
   const result = timer.startCountdown();
+  console.log(result) // { days, hours, minutes, seconds, isComplete}
   if (result.isComplete) {
     clearInterval(interval);
   }
