@@ -3,7 +3,6 @@ function Countdown(startDate) {
   const date = new Date(startDate);
   if (isNaN(date.getTime())) throw new TypeError('Invalid Date!');
   returnObj.cdDate = date;
-
   function startCountdown() {
     const { cdDate } = returnObj;
     if (cdDate === null)
@@ -11,9 +10,7 @@ function Countdown(startDate) {
         'Use new Countdown("date-format") to set date before starting countdown'
       );
     var now = new Date();
-
     var distance = new Date(cdDate).getTime() - now.getTime();
-
     // If the count down is finished, return flag for completion
     if (distance < 0) {
       returnObj.cdDate = 0;
@@ -25,12 +22,9 @@ function Countdown(startDate) {
     );
     var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
     return { days, hours, minutes, seconds, isComplete: false };
   }
-
   returnObj.startCountdown = startCountdown;
   return returnObj;
 }
-
-exports.Countdown = Countdown;
+export { Countdown };
