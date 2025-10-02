@@ -34,4 +34,4 @@ interval = setInterval(() => {
 
 Package Repo: [https://github.com/dustyjay/Countdown-Timer](https://github.com/dustyjay/Countdown-Timer)
 
-A light-weight package for a simple countdown timer
+A simple and customizable countdown timer for JavaScript and frontend frameworks. It supports flexible time formats (seconds, minutes, hours, days), customizable styling and callback functions when the timer ends. Ideal for use cases like flash sales, quizzes, OTP expiration, and event countdowns amongst other use cases
